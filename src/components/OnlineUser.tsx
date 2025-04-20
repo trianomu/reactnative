@@ -3,17 +3,17 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
 const users = [
-  { name: 'John', surname: 'John', uri: 'https://i.pravatar.cc/60?img=1' },
-  { name: 'Zasan', surname: 'Zasan', uri: 'https://i.pravatar.cc/60?img=2' },
-  { name: 'Sem', surname: 'Sem', uri: 'https://i.pravatar.cc/60?img=3' },
-  { name: 'Winda', surname: 'Winda', uri: 'https://i.pravatar.cc/60?img=4' },
-  { name: 'Naya', surname: 'Naya', uri: 'https://i.pravatar.cc/60?img=5' },
-  { name: 'Adam', surname: 'Adam', uri: 'https://i.pravatar.cc/60?img=6' },
-  { name: 'Dio', surname: 'Park', uri: 'https://i.pravatar.cc/60?img=7' },
-  { name: 'Icha', surname: 'Lim', uri: 'https://i.pravatar.cc/60?img=8' },
-  { name: 'Andi', surname: 'Nguyen', uri: 'https://i.pravatar.cc/60?img=9' },
-  { name: 'Yuna', surname: 'Tran', uri: 'https://i.pravatar.cc/60?img=10' },
-  { name: 'Budi', surname: 'Pham', uri: 'https://i.pravatar.cc/60?img=11' },
+  { name: 'John', surname: 'John', uri: 'https://i.pravatar.cc/60?img=1', location:'Sahid' },
+  { name: 'Zasan', surname: 'Zasan', uri: 'https://i.pravatar.cc/60?img=2', location:'BSD' },
+  { name: 'Sem', surname: 'Sem', uri: 'https://i.pravatar.cc/60?img=3', location:'WFH' },
+  { name: 'Winda', surname: 'Winda', uri: 'https://i.pravatar.cc/60?img=4', location:'WFH' },
+  { name: 'Naya', surname: 'Naya', uri: 'https://i.pravatar.cc/60?img=5', location:'BSD' },
+  { name: 'Adam', surname: 'Adam', uri: 'https://i.pravatar.cc/60?img=6', location:'Sahid' },
+  { name: 'Dio', surname: 'Park', uri: 'https://i.pravatar.cc/60?img=7', location:'Sahid' },
+  { name: 'Icha', surname: 'Lim', uri: 'https://i.pravatar.cc/60?img=8', location:'BSD' },
+  { name: 'Andi', surname: 'Nguyen', uri: 'https://i.pravatar.cc/60?img=9', location:'BSD' },
+  { name: 'Yuna', surname: 'Tran', uri: 'https://i.pravatar.cc/60?img=10', location:'WFH' },
+  { name: 'Budi', surname: 'Pham', uri: 'https://i.pravatar.cc/60?img=11', location:'BSD' },
 ];
 
 const OnlineUsers = () => {
@@ -34,6 +34,7 @@ const OnlineUsers = () => {
               <Image source={{ uri: user.uri }} style={styles.avatar} />
               <Text style={styles.name}>{user.name}</Text>
               <Text style={styles.surname}>{user.surname}</Text>
+              <Text style={styles.location}>{user.location}</Text>
             </View>
           ))}
           {users.length > 8 && (
@@ -99,6 +100,11 @@ const styles = StyleSheet.create({
     fontWeight:'bold'
   },
   surname: {
+    fontSize: 10,
+    marginLeft: 10,
+  },
+  location: {
+    fontWeight:'bold',
     fontSize: 10,
     marginLeft: 10,
   },

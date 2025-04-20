@@ -1,10 +1,8 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import NotificationCard, { Notification } from '../components/NptificationCard';
-// import NotificationCard, { Notification } from '../../assets/';
+import NotificationCard, { Notification } from '../components/NotificationCard';
 
 const notifications: Notification[] = [
-  // Reimbursement
   {
     id: '1',
     title: 'Reimbursement',
@@ -29,10 +27,9 @@ const notifications: Notification[] = [
     description: 'Your submission will be processed according to the reimbursement schedule. Please wait.',
     date: 'Yesterday',
     status: 'info',
-    icon: require('../../assets//reimbursement.png'),
+    icon: require('../../assets/reimbursement.png'),
     isRead: true,
   },
-  // Overtime
   {
     id: '4',
     title: 'Overtime',
@@ -60,7 +57,6 @@ const notifications: Notification[] = [
     icon: require('../../assets/overtime.png'),
     isRead: false,
   },
-  // Sickness
   {
     id: '7',
     title: 'Sickness',
@@ -88,8 +84,6 @@ const notifications: Notification[] = [
     icon: require('../../assets/sickness.png'),
     isRead: false,
   },
-
-  // Reimbursement
   {
     id: '10',
     title: 'Reimbursement',

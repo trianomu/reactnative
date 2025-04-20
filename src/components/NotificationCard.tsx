@@ -15,7 +15,7 @@ export type Notification = {
 type Props = {
   item: Notification;
 };
-const targetWords = ['processed', 'approved', 'reviewed', 'rejected'];
+const targetWords = ['processed', 'approved', 'reviewed', 'rejected', 'paid'];
 
 export default function NotificationCard({ item }: Props) {
   const getStatusIcon = (status: 'success' | 'error' | 'info') => {
